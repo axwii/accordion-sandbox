@@ -1,13 +1,17 @@
-"use client";
-import { useState } from "react";
+import Item from "./Item";
 
 const Accordion = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    
     return (
-        <div>
-        <button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
-        {isOpen && <div>Content</div>}
+        <div className="w-full max-w-md mx-auto mt-4">
+            <Item title="Item 1">
+                Content for item 1
+            </Item>
+            <Item title="Item 2">
+                Content for item 2
+            </Item>
+            <Item title="Item 3">
+                Content for item 3
+            </Item>
         </div>
     );
 };
